@@ -22,7 +22,7 @@ app.post("/api/data", (req, res) => {
     mq135,
     temperature,
     humidity,
-    timestamp: new Date().toISOString()
+    timestamp: Date.now()
   };
 
   console.log("📡 Data received from ESP8266:", latestData);
@@ -45,3 +45,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Backend running on port ${PORT}`);
 });
+
